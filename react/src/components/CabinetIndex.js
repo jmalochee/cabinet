@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Router } from 'react-router';
 
-class Index extends Component {
+class CabinetIndex extends Component {
   constructor(props) {
     super(props);
 
@@ -13,9 +13,11 @@ class Index extends Component {
 
   render() {
     return(
-      <div className="main-index">
-
+      <div className="cabinet-index">
+        index
       </div>
     )
   }
 }
+
+export default CabinetIndex;
