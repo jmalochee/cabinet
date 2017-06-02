@@ -1,0 +1,8 @@
+Gemfile
+package.json
+.gitignore
+react/
+app/views/static_pages
+config/routes
+app/controllers/static_pages_controller
+npm install
