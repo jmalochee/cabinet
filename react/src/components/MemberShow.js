@@ -29,12 +29,16 @@ class MemberShow extends Component {
 
   render() {
     return(
-      <div className="row">
+      <div className="row member-show">
         <div className="column">
-          <div className="card">
+          <div className="card text-center">
             <img src={this.state.member.image}/>
             <div className="card-section text-center">
-              <p>{this.state.member.name}</p>
+              <p>{`${this.state.member.first_name} ${this.state.member.last_name}`}</p>
+              <p>{this.state.member.position}</p>
+            </div>
+            <div className="card-section text-left">
+              <p>{this.state.member.about}</p>
             </div>
           </div>
         </div>

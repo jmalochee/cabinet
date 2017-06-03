@@ -13,7 +13,7 @@ class CabinetIndex extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/members/${this.props.params.id}.json`, {
+    fetch('/api/v1/members.json', {
       method: 'GET'
     })
     .then(response => response.json())
