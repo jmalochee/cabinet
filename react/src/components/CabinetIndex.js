@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Router } from 'react-router';
+import MemberItem from './MemberItem'
 
 class CabinetIndex extends Component {
   constructor(props) {
@@ -14,7 +15,23 @@ class CabinetIndex extends Component {
   render() {
     return(
       <div className="cabinet-index">
-        index
+        <div className="row small-up-3 medium-up-4 large-up-5">
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+          <MemberItem/>
+        </div>
       </div>
     )
   }
