@@ -3,12 +3,14 @@ import React from 'react';
 const MemberItem = (props) => {
   return(
     <div className="column">
-      <div className="card">
-        <img src="/assets/members/Carson_Ben.jpg"/>
-        <div className="card-section text-center">
-          <p>Ben Carson</p>
+      <a href={props.link}>
+        <div className="card">
+          <img src={props.image}/>
+          <div className="card-section text-center">
+            <p>{props.name}</p>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   )
 }

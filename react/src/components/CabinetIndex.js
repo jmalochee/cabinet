@@ -7,30 +7,38 @@ class CabinetIndex extends Component {
     super(props);
 
     this.state = {
-      selected_button: null
+      members: []
     }
 
   }
 
+  componentDidMount() {
+    fetch(`/api/v1/members/${this.props.params.id}.json`, {
+      method: 'GET'
+    })
+    .then(response => response.json())
+    .then(responseData => {
+      this.setState({ members: responseData })
+    })
+  }
+
+
   render() {
+    let members = this.state.members.map((member) => {
+      return (
+        <MemberItem
+          image={member.image}
+          name={`${member.first_name} ${member.last_name}`}
+          link={`/members/${member.id}`}
+          key={member.id}
+        />
+      )
+    });
+
     return(
       <div className="cabinet-index">
         <div className="row small-up-3 medium-up-4 large-up-5">
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
-          <MemberItem/>
+          {members}
         </div>
       </div>
     )
