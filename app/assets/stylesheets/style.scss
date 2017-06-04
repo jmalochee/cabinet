@@ -1,3 +1,8 @@
+$color-money: #BFFFDC;
+$color-gift: #DCBFFF;
+$color-handshake: #FFDCBF;
+$color-text: #2A1C2E;
+$color-accent: #FF7A0D;
 
 .card {
   border-style: none;
@@ -9,4 +14,34 @@
 
 .member-show .card img {
   width: 250px;
+}
+
+.buttons {
+
+  div {
+    border-radius: 50%;
+  }
+
+  .button {
+    width: 75px;
+    height: 75px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .money {
+    background-color: $color-money;
+  }
+
+  .gift {
+    background-color: $color-gift;
+  }
+
+  .handshake {
+    background-color: $color-handshake;
+  }
+}
+
+i {
+  color: $color-text;
 }
