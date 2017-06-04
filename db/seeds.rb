@@ -27,3 +27,55 @@ member_data = [
 member_data.each do |mem|
   Member.create(last_name: mem[0], first_name: mem[1], position: mem[2], about: mem[3], image: "/assets/members/#{mem[0]}_#{mem[1]}.jpg")
 end
+
+card_data = [
+  ["Sessions","Jeff","money","Notable Campaign Donors","Mr. Sessions received $10,000 donations from Exxon Mobil in 2014 and 2016 and subsequently wrote a letter to the Department of Justice (which he now heads) requesting that it cease its investigation into whether Exxon Mobil knew and hid information related to its products' effects on climate change.","https://www.documentcloud.org/documents/3222852-Sessions-Letter-to-Lynch.html"],
+  ["Price","Tom","money","Notable Campaign Donors","In 2016, Mr. Price received $21,800 from MiMedx Group, a leading distributor of human amniotic tissue. He also received $15,000 from Woodbranch Investments, a real estate and investments company based in Houston, Texas with several luxury property developments in New York City.","https://www.opensecrets.org/politicians/contrib.php?cycle=2016&cid=N00026160&type=I&newmem=N"],
+  ["Perry","Rick","money","Notable Campaign Donors","Mr. Perry received over $1.5 million in 2016 from Energy Transfer Partners, an energy conglomerate meshed with Sunoco that holds assets such as natural gas, crude oil, natural gas liquids and refined products pipelines. He also received around $250,000 each from Ryan LLC, a Texas tax services firm and Holt Company, a Texas based industrial company.","https://www.opensecrets.org/pres16/contributors?id=N00033486"],
+  ["Zinke","Ryan","money","Notable Campaign Donors","Mr. Zinke received $20,200 from Oasis Petroleum, a Texas based petroleum and natural gas exploration and production company, in 2016. He also received $18,400 from Blessey Marine Services, a company that transports liquid bulk cargo through natural waterways now under Mr. Zinke's jurisdiction.","https://www.opensecrets.org/politicians/contrib.php?cycle=2016&cid=N00035616&type=I&newmem=N"],
+  ["Tillerson","Rex","money","Business Interests","Mr. Tillerson was the CEO of petroleum and oil giant ExxonMobil from 2006 to 2017 and received a salary of $10 million along with $5 million in stock dividends and $250,000 in benefits.","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/027D1E3E494A5F538525809E00615559/$FILE/Tillerson,%20Rex%20W.%20%20final278.pdf"],
+  ["Perdue","Sonny","money","Business Interests","Mr. Perdue heads Perdue Partners LLC,","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/5D6D47C0C5AE5048852580E1002C818A/$FILE/Perdue,%20George%20E.%20%20final278.pdf"],
+  ["Mnuchin","Steve","money","Business Interests"],
+  ["Ross","Wilbur","money","Business Interests"],
+  ["Acosta","Alexander","money","Business Interests","Mr. Acosta earned about $550,000 in 2016. He has said that he will forego both his salaries as well as a bonus from U.S. Century Bank.","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F8AA9E695EC799C2852580DE002C8323/$FILE/Acosta,%20Rene%20Alexander%20finalEA.pdf"],
+  ["Mattis","James","money","Consulting","Mr. Mattis is a consultant for the CNA Corporation, the Jamestown Foundation, and the U.S. Department of State. For these positions, he receives"],
+  ["Kelly","John","money","Consulting"],
+  ["Shulkin","David","money","Consulting"],
+  ["Chao","Elaine","money","Campaign Donations"],
+  ["DeVos","Betsy","money","Campaign Donations"],
+  ["Carson","Benjamin","money","Campaign Donations"],
+  ["Sessions","Jeff","handshake","Notable Campaign Donors","Mr. Sessions received $10,000 donations from Exxon Mobil in 2014 and 2016 and subsequently wrote a letter to the Department of Justice (which he now heads) requesting that it cease its investigation into whether Exxon Mobil knew and hid information related to its products' effects on climate change.","https://www.documentcloud.org/documents/3222852-Sessions-Letter-to-Lynch.html"],
+  ["Price","Tom","handshake","Notable Campaign Donors","In 2016, Mr. Price received $21,800 from MiMedx Group, a leading distributor of human amniotic tissue. He also received $15,000 from Woodbranch Investments, a real estate and investments company based in Houston, Texas with several luxury property developments in New York City.","https://www.opensecrets.org/politicians/contrib.php?cycle=2016&cid=N00026160&type=I&newmem=N"],
+  ["Perry","Rick","handshake","Notable Campaign Donors","Mr. Perry received over $1.5 million in 2016 from Energy Transfer Partners, an energy conglomerate meshed with Sunoco that holds assets such as natural gas, crude oil, natural gas liquids and refined products pipelines. He also received around $250,000 each from Ryan LLC, a Texas tax services firm and Holt Company, a Texas based industrial company.","https://www.opensecrets.org/pres16/contributors?id=N00033486"],
+  ["Zinke","Ryan","handshake","Notable Campaign Donors","Mr. Zinke received $20,200 from Oasis Petroleum, a Texas based petroleum and natural gas exploration and production company, in 2016. He also received $18,400 from Blessey Marine Services, a company that transports liquid bulk cargo through natural waterways now under Mr. Zinke's jurisdiction.","https://www.opensecrets.org/politicians/contrib.php?cycle=2016&cid=N00035616&type=I&newmem=N"],
+  ["Tillerson","Rex","handshake","Business Interests","Mr. Tillerson was the CEO of petroleum and oil giant ExxonMobil from 2006 to 2017 and received a salary of $10 million along with $5 million in stock dividends and $250,000 in benefits.","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/027D1E3E494A5F538525809E00615559/$FILE/Tillerson,%20Rex%20W.%20%20final278.pdf"],
+  ["Perdue","Sonny","handshake","Business Interests","Mr. Perdue heads Perdue Partners LLC,","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/5D6D47C0C5AE5048852580E1002C818A/$FILE/Perdue,%20George%20E.%20%20final278.pdf"],
+  ["Mnuchin","Steve","handshake","Business Interests"],
+  ["Ross","Wilbur","handshake","Business Interests"],
+  ["Acosta","Alexander","handshake","Business Interests","Mr. Acosta earned about $550,000 in 2016. He has said that he will forego both his salaries as well as a bonus from U.S. Century Bank.","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F8AA9E695EC799C2852580DE002C8323/$FILE/Acosta,%20Rene%20Alexander%20finalEA.pdf"],
+  ["Mattis","James","handshake","Consulting","Mr. Mattis is a consultant for the CNA Corporation, the Jamestown Foundation, and the U.S. Department of State. For these positions, he receives"],
+  ["Kelly","John","handshake","Consulting"],
+  ["Shulkin","David","handshake","Consulting"],
+  ["Chao","Elaine","handshake","Campaign Donations"],
+  ["DeVos","Betsy","handshake","Campaign Donations"],
+  ["Carson","Benjamin","handshake","Campaign Donations"],
+  ["Sessions","Jeff","gift","Notable Campaign Donors","Mr. Sessions received $10,000 donations from Exxon Mobil in 2014 and 2016 and subsequently wrote a letter to the Department of Justice (which he now heads) requesting that it cease its investigation into whether Exxon Mobil knew and hid information related to its products' effects on climate change.","https://www.documentcloud.org/documents/3222852-Sessions-Letter-to-Lynch.html"],
+  ["Price","Tom","gift","Notable Campaign Donors","In 2016, Mr. Price received $21,800 from MiMedx Group, a leading distributor of human amniotic tissue. He also received $15,000 from Woodbranch Investments, a real estate and investments company based in Houston, Texas with several luxury property developments in New York City.","https://www.opensecrets.org/politicians/contrib.php?cycle=2016&cid=N00026160&type=I&newmem=N"],
+  ["Perry","Rick","gift","Notable Campaign Donors","Mr. Perry received over $1.5 million in 2016 from Energy Transfer Partners, an energy conglomerate meshed with Sunoco that holds assets such as natural gas, crude oil, natural gas liquids and refined products pipelines. He also received around $250,000 each from Ryan LLC, a Texas tax services firm and Holt Company, a Texas based industrial company.","https://www.opensecrets.org/pres16/contributors?id=N00033486"],
+  ["Zinke","Ryan","gift","Notable Campaign Donors","Mr. Zinke received $20,200 from Oasis Petroleum, a Texas based petroleum and natural gas exploration and production company, in 2016. He also received $18,400 from Blessey Marine Services, a company that transports liquid bulk cargo through natural waterways now under Mr. Zinke's jurisdiction.","https://www.opensecrets.org/politicians/contrib.php?cycle=2016&cid=N00035616&type=I&newmem=N"],
+  ["Tillerson","Rex","gift","Business Interests","Mr. Tillerson was the CEO of petroleum and oil giant ExxonMobil from 2006 to 2017 and received a salary of $10 million along with $5 million in stock dividends and $250,000 in benefits.","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/027D1E3E494A5F538525809E00615559/$FILE/Tillerson,%20Rex%20W.%20%20final278.pdf"],
+  ["Perdue","Sonny","gift","Business Interests","Mr. Perdue heads Perdue Partners LLC,","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/5D6D47C0C5AE5048852580E1002C818A/$FILE/Perdue,%20George%20E.%20%20final278.pdf"],
+  ["Mnuchin","Steve","gift","Business Interests"],
+  ["Ross","Wilbur","gift","Business Interests"],
+  ["Acosta","Alexander","gift","Business Interests","Mr. Acosta earned about $550,000 in 2016. He has said that he will forego both his salaries as well as a bonus from U.S. Century Bank.","https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/F8AA9E695EC799C2852580DE002C8323/$FILE/Acosta,%20Rene%20Alexander%20finalEA.pdf"],
+  ["Mattis","James","gift","Consulting","Mr. Mattis is a consultant for the CNA Corporation, the Jamestown Foundation, and the U.S. Department of State. For these positions, he receives"],
+  ["Kelly","John","gift","Consulting"],
+  ["Shulkin","David","gift","Consulting"],
+  ["Chao","Elaine","gift","Campaign Donations"],
+  ["DeVos","Betsy","gift","Campaign Donations"],
+  ["Carson","Benjamin","gift","Campaign Donations"]
+]
+
+card_data.each do |card|
+  Card.create(member: Member.where(last_name: card[0], first_name: card[1]), type: card[2], card_name: card[3], content: card[4], source: card[5])
+end
