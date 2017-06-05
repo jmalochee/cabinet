@@ -4,4 +4,6 @@ class Member < ApplicationRecord
   validates :position, presence: true
   validates :about, presence: true
   validates :image, presence: true
+
+  has_many :cards
 end

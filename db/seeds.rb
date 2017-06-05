@@ -24,9 +24,9 @@ member_data = [
   ["Carson","Benjamin","Secretary of Housing and Urban Development","Mr. Carson was a neurosurgeon who ran against President Trump during the 2016 campaign. A Trump aide said Mr. Carson was chosen as Secretary of Housing and Urban Development because of \"his life growing up in subsidized housing, growing up in poor communities\" according to NPR."]
 ]
 
-member_data.each do |mem|
-  Member.create(last_name: mem[0], first_name: mem[1], position: mem[2], about: mem[3], image: "/assets/members/#{mem[0]}_#{mem[1]}.jpg")
-end
+# member_data.each do |mem|
+#   Member.create(last_name: mem[0], first_name: mem[1], position: mem[2], about: mem[3], image: "/assets/members/#{mem[0]}_#{mem[1]}.jpg")
+# end
 
 card_data = [
   ["Sessions","Jeff","money","Notable Campaign Donors","Mr. Sessions received $10,000 donations from Exxon Mobil in 2014 and 2016 and subsequently wrote a letter to the Department of Justice (which he now heads) requesting that it cease its investigation into whether Exxon Mobil knew and hid information related to its products' effects on climate change.","https://www.documentcloud.org/documents/3222852-Sessions-Letter-to-Lynch.html"],

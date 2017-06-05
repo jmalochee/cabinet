@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170604193617) do
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.string  "type",      null: false
+    t.string  "card_type", null: false
     t.string  "card_name", null: false
     t.text    "content"
     t.string  "source"
