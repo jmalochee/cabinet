@@ -55,7 +55,7 @@ class MemberShow extends Component {
               </div>
             </div>
           </div>
-          {props.children}
+          {this.props.children}
         </div>
       </div>
     )

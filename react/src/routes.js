@@ -10,7 +10,7 @@ let routes = (
     <IndexRoute component={CabinetIndex}/>
     <Route path="/members/:id" component={MemberShow}>
       <IndexRoute component={About}/>
-      <Route path="/members/:id/:card" 
+      <Route path="/members/:id/:card" />
     </Route>
   </Route>
 );
