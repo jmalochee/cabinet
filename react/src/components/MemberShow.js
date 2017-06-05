@@ -37,10 +37,25 @@ class MemberShow extends Component {
               <p>{`${this.state.member.first_name} ${this.state.member.last_name}`}</p>
               <p>{this.state.member.position}</p>
             </div>
-            <div className="card-section text-left">
-              <p>{this.state.member.about}</p>
+            <div className="row buttons align-center">
+              <div className="column small-3 medium-2 large-2">
+                <div className="button large align-center align-middle money">
+                  <i className="fa fa-money fa-2x"></i>
+                </div>
+              </div>
+              <div className="column small-3 medium-2 large-2">
+                <div className="button large align-center align-self-middle gift">
+                  <i className="fa fa-gift fa-2x"></i>
+                </div>
+              </div>
+              <div className="column small-3 medium-2 large-2">
+                <div className="button large align-center align-middle handshake">
+                  <i className="fa fa-handshake-o fa-2x"></i>
+                </div>
+              </div>
             </div>
           </div>
+          {this.props.children}
         </div>
       </div>
     )
