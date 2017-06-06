@@ -3,7 +3,7 @@ import React from 'react';
 const Layout = (props) => {
   return(
     <div>
-      <h2>Cabinet</h2>
+      <a href="/"><h2 id="title">Meet the Cabinet</h2></a>
       { props.children }
     </div>
   )
