@@ -5,7 +5,7 @@ class Api::V1::MembersController < ApplicationController
   end
 
   def show
-    render json: Member.find(params[:id])
+    render json: { member: Member.find(params[:id]), cards: Member.find(params[:id]).cards }
   end
 
 end

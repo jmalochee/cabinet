@@ -7,26 +7,26 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 member_data = [
-  ["Sessions","Jeff","Attorney General","About Sessions here"],
-  ["Price","Tom","Secretary of Health and Human Services","Mr. Price served as a Republican Representative for Georgia from 2005 to 2017. According to an analysis by the Wall Street Journal, Mr. Price traded over $300,000 in health-related companies since 2012. During those years he served on a House subcommittee on health, writing health-care legislation. He is now in charge of 11 agencies related to health and regulation of health- related companies in his new position."],
-  ["Perry","Rick","Secretary of Energy","Mr. Perry was the Governor of Texas from 2000 to 2015. He ran for president in 2012 on the Republican ticket and tried again in 2016 but dropped out due to low poll numbers. He now oversees the nation's policies on nuclear power, fossil fuels, and alternative energy sources."],
-  ["Zinke","Ryan","Secretary of the Interior","Mr. Zinke was the Republican Representative for the state of Montana from 2014 to 2017, and prior to that served in the Montana State Senate from 2009- 2011. For the majority of his career, he was a U.S. Navy SEAL officer. As Secretary of the Interior, Mr. Zinke will be in charge of policies affecting America's natural resources and tribal and island communities."],
-  ["Tillerson","Rex","Secretary of State","Mr. Tillerson served as the CEO of oil and petroleum giant ExxonMobil from 2006 to 2017. As Secretary of State, Mr. Tillerson is in charge of foreign affairs, many of which deal directly with oil and petroleum deals in the middle east."],
-  ["Perdue","Sonny","Secretary of Agriculture","Mr. Perdue was the Governor of Georgia from 2003 to 2011. Afterwards, he founded Perdue Partners, LLC, a global food and staples commercial export company, with his cousin David Perdue. Mr. Perdue now heads the U.S. Department of Agriculture, overseeing everything from farm subsidies to food inspection."],
-  ["Mnuchin","Steve","Secretary of the Treasury","Mr. Mnuchin spent 17 years working at Wall Street firm Goldman Sachs before creating his own venture capital fund and funding several large Hollywood films like Avatar. Now, Mr. Mnuchin will, as Secretary of the Treasury, oversee all things financial and economic for the country."],
-  ["Ross","Wilbur","Secretary of Commerce","Known as the \"King of Bankruptcy\", Mr. Ross has made his mark buying distressed and defaulting businesses and flipping them for a profit. He will oversee job creation, economic growth and sustainable development, and the standard of living for Americans in his position as Secretary of Commerce."],
-  ["Acosta","Alexander","Secretary of Labor","Mr. Acosta was the dean of Florida International University College of Law. He is also a boardmember of U.S. Century Bank, but plans to step down from both positions and give up stock interests and salaries if confirmed as the Secretary of Labor overseeing everything from working conditions to workers' benefits and rights."],
-  ["Mattis","James","Secretary of Defense","Mr. Mattis is also known as \"Mad Dog\" and is the highest ranking military officer to be in charge of the Pentagon as the Secretary of Defense."],
-  ["Kelly","John","Secretary of Homeland Security","An active member of the military since 1970, Mr. Kelly served as Senior Military Assistant to the Secretary of Defense in 2011 and 2012. He is now the Secretary of Homeland Security, overseeing the third largest governmental department with components such as TSA, Customs and Border Protection, Immigration and Customs Enforcement, U.S. Citizenship and Immigration Services, FEMA, the Coast Guard, and the Secret Service."],
-  ["Shulkin","David","Secretary of Veteran Affairs","Mr. Shulkin is the only holdover from the Obama administration. The former President and CEO of Beth Israel Medical Center in New York City, Mr. Shulkin then managed the health care system and was named on the “50 Most Influential Physician Executives in the Country” by Modern Healthcare. He will now serve as the Secretary of Veteran Affairs, managing health care and benefits for veterans."],
-  ["Chao","Elaine","Secretary of Transportation","Elaine Chao is one of two women in the Trump cabinet. She served as the Secretary of Labor during President George W. Bush's administration and is married to Senate Majority leader Mitch McConnell. She is now the Secretary of Transportation."],
-  ["DeVos","Betsy","Secretary of Education","Ms. DeVos heads up the pro-charter and pro-school-voucher nonprofit American Federation for Children and is a long-time opponent of charter school regulation. She is now the Secretary of Education, heading school regulation, including testing standards and practices. However, much of school regulation is on a state-by-state basis, so Ms. DeVos will primarily act as the speaker for the views of the president on education, according to an analysis by the Atlantic."],
-  ["Carson","Benjamin","Secretary of Housing and Urban Development","Mr. Carson was a neurosurgeon who ran against President Trump during the 2016 campaign. A Trump aide said Mr. Carson was chosen as Secretary of Housing and Urban Development because of \"his life growing up in subsidized housing, growing up in poor communities\" according to NPR."]
+  ["Sessions","Jeff","Attorney General"],
+  ["Price","Tom","Secretary of Health and Human Services"],
+  ["Perry","Rick","Secretary of Energy"],
+  ["Zinke","Ryan","Secretary of the Interior"],
+  ["Tillerson","Rex","Secretary of State"],
+  ["Perdue","Sonny","Secretary of Agriculture"],
+  ["Mnuchin","Steve","Secretary of the Treasury"],
+  ["Ross","Wilbur","Secretary of Commerce"],
+  ["Acosta","Alexander","Secretary of Labor"],
+  ["Mattis","James","Secretary of Defense"],
+  ["Kelly","John","Secretary of Homeland Security"],
+  ["Shulkin","David","Secretary of Veteran Affairs"],
+  ["Chao","Elaine","Secretary of Transportation"],
+  ["DeVos","Betsy","Secretary of Education"],
+  ["Carson","Benjamin","Secretary of Housing and Urban Development"]
 ]
 
-# member_data.each do |mem|
-#   Member.create(last_name: mem[0], first_name: mem[1], position: mem[2], about: mem[3], image: "/assets/members/#{mem[0]}_#{mem[1]}.jpg")
-# end
+member_data.each do |mem|
+  Member.create(last_name: mem[0], first_name: mem[1], position: mem[2], image: "/assets/members/#{mem[0]}_#{mem[1]}.jpg")
+end
 
 card_data = [
   ["Sessions","Jeff","money","Notable Campaign Donors","Mr. Sessions received $10,000 donations from Exxon Mobil in 2014 and 2016 and subsequently wrote a letter to the Department of Justice (which he now heads) requesting that it cease its investigation into whether Exxon Mobil knew and hid information related to its products' effects on climate change.","https://www.documentcloud.org/documents/3222852-Sessions-Letter-to-Lynch.html"],
@@ -73,9 +73,24 @@ card_data = [
   ["Shulkin","David","gift","Consulting"],
   ["Chao","Elaine","gift","Campaign Donations"],
   ["DeVos","Betsy","gift","Campaign Donations"],
-  ["Carson","Benjamin","gift","Campaign Donations"]
+  ["Carson","Benjamin","gift","Campaign Donations"],
+  ["Sessions","Jeff","about","About","About Sessions here"],
+  ["Price","Tom","about","About","Mr. Price served as a Republican Representative for Georgia from 2005 to 2017. According to an analysis by the Wall Street Journal, Mr. Price traded over $300,000 in health-related companies since 2012. During those years he served on a House subcommittee on health, writing health-care legislation. He is now in charge of 11 agencies related to health and regulation of health- related companies in his new position."],
+  ["Perry","Rick","about","About","Mr. Perry was the Governor of Texas from 2000 to 2015. He ran for president in 2012 on the Republican ticket and tried again in 2016 but dropped out due to low poll numbers. He now oversees the nation's policies on nuclear power, fossil fuels, and alternative energy sources."],
+  ["Zinke","Ryan","about","About","Mr. Zinke was the Republican Representative for the state of Montana from 2014 to 2017, and prior to that served in the Montana State Senate from 2009- 2011. For the majority of his career, he was a U.S. Navy SEAL officer. As Secretary of the Interior, Mr. Zinke will be in charge of policies affecting America's natural resources and tribal and island communities."],
+  ["Tillerson","Rex","about","About","Mr. Tillerson served as the CEO of oil and petroleum giant ExxonMobil from 2006 to 2017. As Secretary of State, Mr. Tillerson is in charge of foreign affairs, many of which deal directly with oil and petroleum deals in the middle east."],
+  ["Perdue","Sonny","about","About","Mr. Perdue was the Governor of Georgia from 2003 to 2011. Afterwards, he founded Perdue Partners, LLC, a global food and staples commercial export company, with his cousin David Perdue. Mr. Perdue now heads the U.S. Department of Agriculture, overseeing everything from farm subsidies to food inspection."],
+  ["Mnuchin","Steve","about","About","Mr. Mnuchin spent 17 years working at Wall Street firm Goldman Sachs before creating his own venture capital fund and funding several large Hollywood films like Avatar. Now, Mr. Mnuchin will, as Secretary of the Treasury, oversee all things financial and economic for the country."],
+  ["Ross","Wilbur","about","About","Known as the \"King of Bankruptcy\", Mr. Ross has made his mark buying distressed and defaulting businesses and flipping them for a profit. He will oversee job creation, economic growth and sustainable development, and the standard of living for Americans in his position as Secretary of Commerce."],
+  ["Acosta","Alexander","about","About","Mr. Acosta was the dean of Florida International University College of Law. He is also a boardmember of U.S. Century Bank, but plans to step down from both positions and give up stock interests and salaries if confirmed as the Secretary of Labor overseeing everything from working conditions to workers' benefits and rights."],
+  ["Mattis","James","about","About","Mr. Mattis is also known as \"Mad Dog\" and is the highest ranking military officer to be in charge of the Pentagon as the Secretary of Defense."],
+  ["Kelly","John","about","About","An active member of the military since 1970, Mr. Kelly served as Senior Military Assistant to the Secretary of Defense in 2011 and 2012. He is now the Secretary of Homeland Security, overseeing the third largest governmental department with components such as TSA, Customs and Border Protection, Immigration and Customs Enforcement, U.S. Citizenship and Immigration Services, FEMA, the Coast Guard, and the Secret Service."],
+  ["Shulkin","David","about","About","Mr. Shulkin is the only holdover from the Obama administration. The former President and CEO of Beth Israel Medical Center in New York City, Mr. Shulkin then managed the health care system and was named on the “50 Most Influential Physician Executives in the Country” by Modern Healthcare. He will now serve as the Secretary of Veteran Affairs, managing health care and benefits for veterans."],
+  ["Chao","Elaine","about","About","Elaine Chao is one of two women in the Trump cabinet. She served as the Secretary of Labor during President George W. Bush's administration and is married to Senate Majority leader Mitch McConnell. She is now the Secretary of Transportation."],
+  ["DeVos","Betsy","about","About","Ms. DeVos heads up the pro-charter and pro-school-voucher nonprofit American Federation for Children and is a long-time opponent of charter school regulation. She is now the Secretary of Education, heading school regulation, including testing standards and practices. However, much of school regulation is on a state-by-state basis, so Ms. DeVos will primarily act as the speaker for the views of the president on education, according to an analysis by the Atlantic."],
+  ["Carson","Benjamin","about","About","Mr. Carson was a neurosurgeon who ran against President Trump during the 2016 campaign. A Trump aide said Mr. Carson was chosen as Secretary of Housing and Urban Development because of \"his life growing up in subsidized housing, growing up in poor communities\" according to NPR."]
 ]
 
 card_data.each do |card|
-  Card.create(member: Member.where(last_name: card[0], first_name: card[1]), type: card[2], card_name: card[3], content: card[4], source: card[5])
+  Card.create(member: Member.where(last_name: card[0], first_name: card[1]).first, card_type: card[2], card_name: card[3], content: card[4], source: card[5])
 end

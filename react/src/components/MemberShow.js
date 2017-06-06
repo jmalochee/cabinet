@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Card from "./components/Card"
 
 class MemberShow extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      member: {}
+      member: {},
+      cards: [],
+      card: "about"
     }
 
   }
@@ -22,7 +25,8 @@ class MemberShow extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({ member: body });
+      this.setState({ member: body.member });
+      this.setState({ cards: body.cards });
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -55,7 +59,9 @@ class MemberShow extends Component {
               </div>
             </div>
           </div>
-          {this.props.children}
+          <Card
+            type={this.state.cards.}
+          />
         </div>
       </div>
     )
