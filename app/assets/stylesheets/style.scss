@@ -28,17 +28,26 @@ $color-accent: #FF7A0D;
     padding-left: 0;
     padding-right: 0;
   }
+}
 
-  .money {
-    background-color: $color-money;
+.money {
+  background-color: $color-money;
+  .buttons &:hover {
+    background-color: darken($color-money, 12%);
   }
+}
 
-  .gift {
-    background-color: $color-gift;
+.gift {
+  background-color: $color-gift;
+  .buttons &:hover {
+    background-color: darken($color-gift, 12%);
   }
+}
 
-  .handshake {
-    background-color: $color-handshake;
+.handshake {
+  background-color: $color-handshake;
+  .buttons &:hover {
+    background-color: darken($color-handshake, 12%);
   }
 }
 
