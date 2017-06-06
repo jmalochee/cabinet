@@ -51,9 +51,9 @@ class MemberShow extends Component {
 
     return(
       <div className="row member-show">
-        <div className="column">
+        <div className="column text-center">
           <div className="card text-center">
-            <img src={this.state.member.image}/>
+            <img src={this.state.member.image} onClick={() => this.buttonHandler("about")}/>
             <div className="card-section text-center">
               <p>{`${this.state.member.first_name} ${this.state.member.last_name}`}</p>
               <p>{this.state.member.position}</p>

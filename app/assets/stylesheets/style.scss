@@ -4,6 +4,10 @@ $color-handshake: #FFDCBF;
 $color-text: #2A1C2E;
 $color-accent: #FF7A0D;
 
+#title {
+  margin: 15px;
+}
+
 .card {
   border-style: none;
   margin-left: 15px;
@@ -11,6 +15,10 @@ $color-accent: #FF7A0D;
 
   img {
     border-radius: 50%;
+  }
+
+  img:hover {
+    opacity:0.85;
   }
 }
 
