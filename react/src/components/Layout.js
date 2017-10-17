@@ -2,9 +2,11 @@ import React from 'react';
 
 const Layout = (props) => {
   return(
-    <div>
+    <div className="column text-center">
       <a href="/"><h2 id="title">Meet the Cabinet</h2></a>
-      { props.children }
+        <div className="row">
+          { props.children }
+        </div>
     </div>
   )
 }
