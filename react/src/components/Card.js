@@ -6,7 +6,7 @@ const Card = (props) => {
       <div className={`card-section ${props.type} text-left`}>
         <h3>{props.name}</h3>
         <p>{props.content}</p>
-        <p><a href={props.source}>see more</a></p>
+        <p><a href={props.source}>{props.source}</a></p>
       </div>
     </div>
   )
