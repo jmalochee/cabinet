@@ -9,7 +9,7 @@ class Api::V1::MembersController < ApplicationController
     cards = {}
 
     member.cards.each do |card|
-      card.content ||= "There is no content to display for #{member.first_name} #{member.last_name} > #{card.card_name} at this time."
+      card.content ||= "There is no #{card.card_name} content to display for #{member.first_name} #{member.last_name} at this time."
       cards[card.card_type.to_sym] = card
     end
 
