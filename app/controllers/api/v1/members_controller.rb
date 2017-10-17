@@ -1,7 +1,7 @@
 class Api::V1::MembersController < ApplicationController
 
   def index
-    render json: Member.all
+    render json: Member.order(:last_name)
   end
 
   def show
