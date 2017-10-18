@@ -37,7 +37,7 @@ class CabinetIndex extends Component {
 
     return(
       <div className="cabinet-index">
-        <div className="row small-up-2 medium-up-3 large-up-5">
+        <div className="row small-up-1 medium-up-3 large-up-5 align-spaced">
           {members}
         </div>
       </div>
