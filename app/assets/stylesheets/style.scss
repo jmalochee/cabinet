@@ -67,7 +67,5 @@ i {
 
 .cabinet-index-item {
   margin: 0 auto;
-  @media screen and (max-width: 40em) {
-    width: 255px;
-  }
+  max-width: 255px;
 }
