@@ -50,34 +50,32 @@ class MemberShow extends Component {
     })
 
     return(
-      <div className="row member-show">
-        <div className="column text-center">
-          <div className="card text-center">
-            <img src={this.state.member.image} onClick={() => this.buttonHandler("about")}/>
-            <div className="card-section text-center">
-              <p>{`${this.state.member.first_name} ${this.state.member.last_name}`}</p>
-              <p>{this.state.member.position}</p>
+      <div className="column text-center member-show">
+        <div className="card text-center">
+          <img src={this.state.member.image} onClick={() => this.buttonHandler("about")}/>
+          <div className="card-section text-center">
+            <p>{`${this.state.member.first_name} ${this.state.member.last_name}`}</p>
+            <p>{this.state.member.position}</p>
+          </div>
+          <div className="row buttons align-center">
+            <div className="column small-3 medium-2 large-2">
+              <div className="button large align-center align-middle money" onClick={() => this.buttonHandler("money")}>
+                <i className="fa fa-money fa-2x"></i>
+              </div>
             </div>
-            <div className="row buttons align-center">
-              <div className="column small-3 medium-2 large-2">
-                <div className="button large align-center align-middle money" onClick={() => this.buttonHandler("money")}>
-                  <i className="fa fa-money fa-2x"></i>
-                </div>
+            <div className="column small-3 medium-2 large-2">
+              <div className="button large align-center align-self-middle gift" onClick={() => this.buttonHandler("gift")}>
+                <i className="fa fa-gift fa-2x"></i>
               </div>
-              <div className="column small-3 medium-2 large-2">
-                <div className="button large align-center align-self-middle gift" onClick={() => this.buttonHandler("gift")}>
-                  <i className="fa fa-gift fa-2x"></i>
-                </div>
-              </div>
-              <div className="column small-3 medium-2 large-2">
-                <div className="button large align-center align-middle handshake" onClick={() => this.buttonHandler("handshake")}>
-                  <i className="fa fa-handshake-o fa-2x"></i>
-                </div>
+            </div>
+            <div className="column small-3 medium-2 large-2">
+              <div className="button large align-center align-middle handshake" onClick={() => this.buttonHandler("handshake")}>
+                <i className="fa fa-handshake-o fa-2x"></i>
               </div>
             </div>
           </div>
-          {card()}
         </div>
+        {card()}
       </div>
     )
   }

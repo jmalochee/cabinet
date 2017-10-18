@@ -24,6 +24,7 @@ $color-accent: #FF7A0D;
 
 .member-show .card img {
   width: 250px;
+  margin: auto;
 }
 
 .buttons {
@@ -71,4 +72,8 @@ i {
   @media screen and (max-width: 40em) {
     max-width: 175px;
   }
+}
+
+.card-section {
+  overflow: hidden;
 }
