@@ -4,7 +4,7 @@ const MemberItem = (props) => {
   return(
     <div className="column">
       <a href={props.link}>
-        <div className="card">
+        <div className="card cabinet-index-item">
           <img src={props.image}/>
           <div className="card-section text-center">
             <p>{props.name}</p>

@@ -64,3 +64,10 @@ $color-accent: #FF7A0D;
 i {
   color: $color-text;
 }
+
+.cabinet-index-item {
+  margin: 0 auto;
+  @media screen and (max-width: 40em) {
+    width: 255px;
+  }
+}
